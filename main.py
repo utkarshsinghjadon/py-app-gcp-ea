@@ -15,17 +15,28 @@
 # [START gae_python38_app]
 # [START gae_python3_app]
 from flask import Flask
-
-
+import wikipedia
+import os
+import smtplib, ssl
 # If `entrypoint` is not defined in app.yaml, App Engine will look for an app
 # called `app` in `main.py`.
 app = Flask(__name__)
 
+def wishMe():
+    hour = int(datetime.datetime.now().hour)
+    if hour>=0 and hour<12:
+        return("Morno!")
+    elif hour>=12 and hour<18:
+        return("Afternoon!") 
+    else:
+        return("Evening")
+    return Wishing
+#     speak("I'm Archi. You must be Utkarsh Singh Jadon. Please tell me how may I help you?")
 
 @app.route('/')
-def hello():
+def hello(Wishing):
     """Return a friendly HTTP greeting."""
-    return 'Hello World!'
+    return 'Hello World!'+ Wishing
 
 
 if __name__ == '__main__':

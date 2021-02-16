@@ -4,3 +4,4 @@ requests
 wikipedia
 python-firebase
 python_jwt
+six

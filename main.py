@@ -21,11 +21,11 @@ import datetime
 import smtplib, ssl
 import requests
 from flask import Flask, request, json, redirect, url_for, render_template, make_response, session, escape
-from firebase import firebase
+# from firebase import firebase
 # If `entrypoint` is not defined in app.yaml, App Engine will look for an app
 # called `app` in `main.py`.
 app = Flask(__name__)
-app.secret_key = 'hehhhnn'
+# app.secret_key = 'hehhhnn'
 
 receive = requests.get('https://imgs.xkcd.com/comics/making_progress.png')
 
@@ -33,11 +33,11 @@ receive = requests.get('https://imgs.xkcd.com/comics/making_progress.png')
     
 #     speak("I'm Archi. You must be Utkarsh Singh Jadon. Please tell me how may I help you?")
 
-@app.route('/fire')
-def fire():
-    firebaseApp = firebase.FirebaseApplication('https://console-elite-default-rtdb.firebaseio.com/', None)
-    result = firebaseApp.get('/users', None)
-    return result
+# @app.route('/fire')
+# def fire():
+#     firebaseApp = firebase.FirebaseApplication('https://console-elite-default-rtdb.firebaseio.com/', None)
+#     result = firebaseApp.get('/users', None)
+#     return result
 @app.route('/forms/')
 def FormResponses():
      r = requests.get('https://eliteacademy.co.in/')

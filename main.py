@@ -50,10 +50,10 @@ def hello():
     if hour>=0 and hour<12:
         return("Morno!")
     elif hour>=12 and hour<18:
-        return("Afternoon!") 
+        return("Afternoon hello!") 
     else:
-        return("Evening")
-    return 'Hello World!'+ Wishing
+        return("Evening Hello")
+    return
 
 @app.route('/bot', methods=['POST'])
 def on_event():

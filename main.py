@@ -46,14 +46,13 @@ def FormResponses():
 @app.route('/')
 def hello():
     """Return a friendly HTTP greeting."""
-	hour = int(datetime.datetime.now().hour)
+    hour = int(datetime.datetime.now().hour)
     if hour>=0 and hour<12:
         return("Morno!")
     elif hour>=12 and hour<18:
         return("Afternoon!") 
     else:
         return("Evening")
-    return Wishing
     return 'Hello World!'+ Wishing
 
 @app.route('/bot', methods=['POST'])

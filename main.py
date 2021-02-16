@@ -29,15 +29,8 @@ app.secret_key = 'hehhhnn'
 
 receive = requests.get('https://imgs.xkcd.com/comics/making_progress.png')
 
-def wishMe():
-    hour = int(datetime.datetime.now().hour)
-    if hour>=0 and hour<12:
-        return("Morno!")
-    elif hour>=12 and hour<18:
-        return("Afternoon!") 
-    else:
-        return("Evening")
-    return Wishing
+# def wishMe():
+    
 #     speak("I'm Archi. You must be Utkarsh Singh Jadon. Please tell me how may I help you?")
 
 @app.route('/fire')
@@ -51,8 +44,16 @@ def FormResponses():
      link_status_code = r.status_code
      return link_status_code
 @app.route('/')
-def hello(Wishing):
+def hello():
     """Return a friendly HTTP greeting."""
+	hour = int(datetime.datetime.now().hour)
+    if hour>=0 and hour<12:
+        return("Morno!")
+    elif hour>=12 and hour<18:
+        return("Afternoon!") 
+    else:
+        return("Evening")
+    return Wishing
     return 'Hello World!'+ Wishing
 
 @app.route('/bot', methods=['POST'])

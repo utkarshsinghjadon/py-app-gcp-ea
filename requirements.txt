@@ -7,3 +7,4 @@ python_jwt
 six
 gcloud
 sseclient
+Crypto

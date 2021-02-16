@@ -6,3 +6,4 @@ python-firebase
 python_jwt
 six
 gcloud
+sseclient
